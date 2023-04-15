@@ -1,7 +1,7 @@
 import axios from "axios"
 import './Header.css'
 
-import {Container , Navbar, Grid} from 'react-bootstrap'
+import {Container , Navbar} from 'react-bootstrap'
 
 
 const Header = (props) => {
@@ -20,15 +20,13 @@ const Header = (props) => {
         .catch(error => console.log(error))
     }
     return(
-        <Navbar expand='lg'>
-            <Container fluid>
-                <Navbar.Brand>Spentrace</Navbar.Brand>
-                {
-                    props.user.loggedIn && <i class="fi fi-rr-sign-out-alt"></i>
-                }
-                
-            </Container>
-        </Navbar>
+        <section className="header flex h-12">
+            <h1 className="text-gray-300 text-5xl hover:text-white">Spentrace</h1>
+            {
+                props.user.loggedIn && <i className="fi fi-rr-sign-out-alt text-gray-300 text-2xl"></i>
+            }
+            
+        </section>
     )
 }
 
