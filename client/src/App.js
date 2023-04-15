@@ -3,7 +3,9 @@ import { useState } from 'react'
 
 import {Container, Row, Col, Button} from 'react-bootstrap'
 import './App.css';
+
 import Header from './Containers/Header/Header';
+import LandingPage from './Containers/LandingPage/LandingPage';
 
 const App = () => {
   // ------------------------------ VARIABLES ------------------------------
@@ -27,17 +29,18 @@ const App = () => {
     .then(res => setTestVar(res.data))
     .catch(err => console.log(err))
   }
-  return <Container 
-            fluid 
-            style={{
-              paddingLeft: 0, 
-              paddingRight: 0
-              }}> 
+  return <main className='container-none'>
     <Header 
       server = {server}
       user = {user}
     />
-  </Container>
+    {
+      !user.loggedIn
+      ? <LandingPage />
+      : <>
+      </>
+    }
+  </main>
 }
 
 export default App;

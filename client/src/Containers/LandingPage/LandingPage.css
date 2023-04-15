@@ -1,0 +1,8 @@
+.landingPage {
+    border: solid white;
+    border-radius: 50px;
+    background: linear-gradient(rgb(37, 34, 34), rgb(161, 158, 158));
+    box-shadow: 1px 1px 5px 2px white;
+    font-family: 'Space Mono';
+    color: #B0B7C4
+}

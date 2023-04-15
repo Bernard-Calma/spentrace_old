@@ -1,24 +1,10 @@
-.navbar, .navbar-brand {
-    padding: 0;
-}
-
-.navbar {
+.header {
     background-color: black;
     box-shadow: 1px 1px 5px 3px white;
-    color: white;
-}
-
-.navbar-brand {
     font-family: 'Russo One';
-    font-size: 50px;
-    color: #dbdbdb;
+    justify-content: space-between;
 }
 
-.fi-rr-sign-out-alt {
-    font-size: 30px;
-}
-
-.navbar-brand:hover, .fi-rr-sign-out-alt:hover {
-    color: white;
+.header h1:hover {
     cursor: pointer;
 }
