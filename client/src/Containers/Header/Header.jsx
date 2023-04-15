@@ -23,7 +23,10 @@ const Header = (props) => {
         <Navbar expand='lg'>
             <Container fluid>
                 <Navbar.Brand>Spentrace</Navbar.Brand>
-                <i class="fi fi-rr-sign-out-alt"></i>
+                {
+                    props.user.loggedIn && <i class="fi fi-rr-sign-out-alt"></i>
+                }
+                
             </Container>
         </Navbar>
     )

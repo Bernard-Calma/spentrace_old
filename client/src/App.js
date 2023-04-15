@@ -35,6 +35,7 @@ const App = () => {
               }}> 
     <Header 
       server = {server}
+      user = {user}
     />
   </Container>
 }
